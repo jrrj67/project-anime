@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', 'VideoController@show')->name('videos');
 
-Route::get('episode/{id}', 'VideoController@watch')->name('watch');
+Route::get('naruto-shippuden/{id}', 'VideoController@watch')->name('episode');

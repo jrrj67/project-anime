@@ -13,7 +13,7 @@
             <div class="col l3">
                 <div class="card">
                     <div class="card-image cover">
-                        <a href="{{route('watch', 1)}}">
+                        <a href="{{route('episode', 1)}}">
                             <img class="responsive-img playBtn" src="{{asset('images/playBtn.png')}}" alt="">
                         </a>
                     </div>
