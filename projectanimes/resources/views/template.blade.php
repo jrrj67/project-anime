@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/materialize.css')}}">
     <title>@yield('title')</title>
 </head>
-<body>
+<body class="grey darken-3">
 
 <header>
     <nav>
