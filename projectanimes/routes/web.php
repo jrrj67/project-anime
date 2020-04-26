@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('videos', 'VideoController@show');
+Route::get('videos', 'VideoController@show')->name('videos');
 
 Route::get('episode/{id}', 'VideoController@watch')->name('watch');

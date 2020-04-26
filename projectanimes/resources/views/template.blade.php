@@ -14,10 +14,7 @@
     <nav>
         <div class="nav-wrapper grey darken-4">
             <div class="row">
-                <a href="#" class="brand-logo col l1">ProjectAnimes</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Home</a></li>
-                </ul>
+                <a href="{{route('videos')}}" class="brand-logo col l1">ProjectAnimes</a>
             </div>
         </div>
     </nav>
