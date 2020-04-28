@@ -15,7 +15,7 @@
     <nav>
         <div class="nav-wrapper orange darken-3">
             <div class="row">
-                <a href="{{route('videos')}}" class="brand-logo center">ProjectAnimes</a>
+                <a href="{{route('videos', 1)}}" class="brand-logo center">ProjectAnimes</a>
             </div>
         </div>
     </nav>
@@ -30,5 +30,10 @@
     @yield('footer')
 </footer>
 <script src="{{asset('js/materialize.js')}}"></script>
+<script>
+    let pathname = window.location.pathname;
+    let currentPage = pathname.replace('/', '');
+    document.getElementById(currentPage).classList.add("orange");
+</script>
 </body>
 </html>

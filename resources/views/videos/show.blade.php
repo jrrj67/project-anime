@@ -30,37 +30,39 @@
                 </div>";
             }
 
-            setEpisode('ep1', '01', 'Naruto Shippuden 1');
-            setEpisode('ep2', '02', 'Naruto Shippuden 2');
-            setEpisode('ep3', '03', 'Naruto Shippuden 3');
-            setEpisode('ep4', '04', 'Naruto Shippuden 4');
+            setEpisode('ep'.$pgEpisode[0], $pgEpisode[0], 'Naruto Shippuden '.$pgEpisode[0]);
+            setEpisode('ep'.$pgEpisode[1], $pgEpisode[1], 'Naruto Shippuden '.$pgEpisode[1]);
+            setEpisode('ep'.$pgEpisode[2], $pgEpisode[2], 'Naruto Shippuden '.$pgEpisode[2]);
+            setEpisode('ep'.$pgEpisode[3], $pgEpisode[3], 'Naruto Shippuden '.$pgEpisode[3]);
             ?>
         </div>
         <div class="row">
             <?php
-            setEpisode('ep5', '05', 'Naruto Shippuden 5');
-            setEpisode('ep6', '06', 'Naruto Shippuden 6');
-            setEpisode('ep7', '07', 'Naruto Shippuden 7');
-            setEpisode('ep8', '08', 'Naruto Shippuden 8');
+            setEpisode('ep'.$pgEpisode[4], $pgEpisode[4], 'Naruto Shippuden '.$pgEpisode[4]);
+            setEpisode('ep'.$pgEpisode[5], $pgEpisode[5], 'Naruto Shippuden '.$pgEpisode[5]);
+            setEpisode('ep'.$pgEpisode[6], $pgEpisode[6], 'Naruto Shippuden '.$pgEpisode[6]);
+            setEpisode('ep'.$pgEpisode[7], $pgEpisode[7], 'Naruto Shippuden '.$pgEpisode[7]);
             ?>
         </div>
         <div class="row">
             <?php
-            setEpisode('ep9', '09', 'Naruto Shippuden 9');
-            setEpisode('ep10', '10', 'Naruto Shippuden 10');
-            setEpisode('ep11', '11', 'Naruto Shippuden 11');
-            setEpisode('ep12', '12', 'Naruto Shippuden 12');
+            setEpisode('ep'.$pgEpisode[8], $pgEpisode[8], 'Naruto Shippuden '.$pgEpisode[8]);
+            setEpisode('ep'.$pgEpisode[9], $pgEpisode[9], 'Naruto Shippuden '.$pgEpisode[9]);
+            setEpisode('ep'.$pgEpisode[10], $pgEpisode[10], 'Naruto Shippuden '.$pgEpisode[10]);
+            setEpisode('ep'.$pgEpisode[11], $pgEpisode[11], 'Naruto Shippuden '.$pgEpisode[11]);
             ?>
         </div>
         <div class="row">
             <div class="col l12 center">
                 <ul class="pagination">
                     <li class="disabled"><a class="grey-text" href="#!"><i class="material-icons">chevron_left</i></a></li>
-                    <li class="orange darken-3"><a href="#!">1</a></li>
-                    <li class="waves-effect"><a class="white-text" href="#!">2</a></li>
-                    <li class="waves-effect"><a class="white-text" href="#!">3</a></li>
-                    <li class="waves-effect"><a class="white-text" href="#!">4</a></li>
-                    <li class="waves-effect"><a class="white-text" href="#!">5</a></li>
+                    <li id="1" class="waves-effect darken-3"><a class="white-text" href="{{route('videos', 1)}}">1</a></li>
+                    <li id="2" class="waves-effect darken-3"><a class="white-text" href="{{route('videos', 2)}}">2</a></li>
+                    <li id="3" class="waves-effect darken-3"><a class="white-text" href="{{route('videos', 3)}}">3</a></li>
+                    <li id="4" class="waves-effect darken-3"><a class="white-text" href="{{route('videos', 4)}}">4</a></li>
+                    <li id="5" class="waves-effect darken-3"><a class="white-text" href="{{route('videos', 5)}}">5</a></li>
+                    <li id="5" class="waves-effect darken-3"><a class="white-text" href="{{route('videos', 6)}}">6</a></li>
+                    <li id="5" class="waves-effect darken-3"><a class="white-text" href="{{route('videos', 7)}}">7</a></li>
                     <li class="waves-effect"><a class="grey-text"  href="#!"><i class="material-icons">chevron_right</i></a></li>
                 </ul>
             </div>
@@ -71,8 +73,3 @@
 @section('footer')
 
 @endsection
-{{--<a href="{{route('watch', 1)}}"><img src={{asset('covers/1.png')}}></a>--}}
-<?
-
-
-?>

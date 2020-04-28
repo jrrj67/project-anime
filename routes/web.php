@@ -12,6 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'VideoController@show')->name('videos');
+Route::get('/{page}', 'VideoController@show')->name('videos');
 
 Route::get('naruto-shippuden/{id}', 'VideoController@watch')->name('episode');
