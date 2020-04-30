@@ -9,7 +9,7 @@ class VideoController extends Controller
     public function show(Request $request)
     {
         $currentPage = $request->route('page');
-        $maxPage = 21;
+        $maxPage = 16;
         $maxEpisode = 500;
 
         //validate route /0
@@ -23,8 +23,10 @@ class VideoController extends Controller
         $previousPage = $currentPage - 1;
 
         $nextPage = $currentPage + 1;
+
         //paginate
-        $perPage = 24;
+        $perPage = 32;
+
         if ($currentPage == 1)
         {
             $i = 1;
