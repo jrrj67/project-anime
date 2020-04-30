@@ -15,7 +15,7 @@
     <nav>
         <div class="nav-wrapper orange darken-3">
             <div class="row">
-                <a href="{{route('videos', 1)}}" class="brand-logo center">ProjectAnimes</a>
+                <a href="{{route('home')}}" class="brand-logo center">ProjectAnimes</a>
             </div>
         </div>
     </nav>
@@ -28,12 +28,37 @@
 
 <footer>
     @yield('footer')
+
+    <footer class="page-footer orange darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">ProjectAnimes</h5>
+                    <p class="grey-text text-lighten-4">Meu site de animes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Ricardo Rocha
+            </div>
+        </div>
+    </footer>
 </footer>
 <script src="{{asset('js/materialize.js')}}"></script>
 <script>
-    let pathname = window.location.pathname;
-    let currentPage = pathname.replace('/', '');
+    //set current page paginator color
+    let pathname = window.location.pathname.split('/');
+    let currentPage = pathname[3];
     document.getElementById(currentPage).classList.add("orange");
+
+    // disable prv button
+    if(currentPage === '1' || currentPage === '21')
+    {
+        document.getElementById('prv').style.pointerEvents="none";
+        document.getElementById('nxt').style.pointerEvents="none";
+    }
+
 </script>
 </body>
 </html>
