@@ -112,5 +112,18 @@
 @endsection
 
 @section('footer')
+<script>
+        //set current page paginator color
+        let pathname = window.location.pathname.split('/');
+        let currentPage = pathname[3];
+        document.getElementById(currentPage).classList.add("orange");
 
+        // disable prv button
+        if(currentPage === '1' || currentPage === '21')
+        {
+            document.getElementById('prv').style.pointerEvents="none";
+            document.getElementById('nxt').style.pointerEvents="none";
+        }
+
+    </script>
 @endsection
