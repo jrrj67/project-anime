@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var options = {
         data:
         {
-            "Naruto Shippuden": window.location.protocol + 'covers/naruto-shippuden/naruto-cover.jpg',
+            "Naruto Shippuden": window.location.hostname + 'covers/naruto-shippuden/naruto-cover.jpg',
         },
         minLength: 2,
         onAutocomplete: function (res) {
