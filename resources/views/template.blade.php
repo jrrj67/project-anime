@@ -15,18 +15,18 @@
     <nav>
         <div class="nav-wrapper orange darken-3">
             <div class="row">
-                <a href="{{route('home')}}" class="brand-logo col l1">ProjectAnimes</a>
-                <div class="col l11">
+                <a href="{{route('home')}}" class="brand-logo col l1 push-l1">ProjectAnimes</a>
+                <div class="col l11" style="padding-right: 0">
                     <ul>
                         <form action="">
-                            <li class="col l5 push-l4 input-field">
-                                <input type="text" id="autocomplete-input" class="autocomplete grey darken-3 white-text"
-                                       autocomplete="off">
-                            </li>
-                            <li class="col l2 push-l3">
+                            <li class="right red darken-4">
                                 <button class="waves-effect white-text transparent" style="border: none;">
                                     <i class="material-icons">search</i>
                                 </button>
+                            </li>
+                            <li class="col l4 right input-field grey darken-4">
+                                <input type="text" id="autocomplete-input" class="autocomplete grey darken-3 white-text"
+                                       autocomplete="off" style="text-indent:10px; border-radius: 10px">
                             </li>
                         </form>
                     </ul>
