@@ -4452,7 +4452,7 @@ nav .input-field label {
 }
 
 nav .input-field label i {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(border-bottom);
   -webkit-transition: color .3s;
   transition: color .3s;
 }
@@ -5543,7 +5543,7 @@ button.btn-floating {
 }
 
 .dropdown-content {
-  background-color: #fff;
+  background-color: #212121;
   margin: 0;
   display: none;
   min-width: 100px;
@@ -5586,7 +5586,7 @@ button.btn-floating {
 
 .dropdown-content li > a, .dropdown-content li > span {
   font-size: 16px;
-  color: #26a69a;
+  color: #e65100;
   display: block;
   line-height: 22px;
   padding: 14px 16px;
@@ -6225,9 +6225,9 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  -webkit-box-shadow: 0 1px 0 0 #26a69a;
-          box-shadow: 0 1px 0 0 #26a69a;
+  border-bottom: 1px solid #e65100;
+  -webkit-box-shadow: 0 1px 0 0 #e65100;
+          box-shadow: 0 1px 0 0 #e65100;
 }
 
 input:not([type]):focus:not([readonly]) + label,

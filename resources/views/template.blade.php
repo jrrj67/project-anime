@@ -15,7 +15,22 @@
     <nav>
         <div class="nav-wrapper orange darken-3">
             <div class="row">
-                <a href="{{route('home')}}" class="brand-logo center">ProjectAnimes</a>
+                <a href="{{route('home')}}" class="brand-logo col l1">ProjectAnimes</a>
+                <div class="col l11">
+                    <ul>
+                        <form action="">
+                            <li class="col l5 push-l4 input-field">
+                                <input type="text" id="autocomplete-input" class="autocomplete grey darken-3 white-text"
+                                       autocomplete="off">
+                            </li>
+                            <li class="col l2 push-l3">
+                                <button class="waves-effect white-text transparent" style="border: none;">
+                                    <i class="material-icons">search</i>
+                                </button>
+                            </li>
+                        </form>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -24,6 +39,7 @@
 
 <main>
     @yield('main')
+
 </main>
 
 <footer>
@@ -46,5 +62,6 @@
     </footer>
 </footer>
 <script src="{{asset('js/materialize.js')}}"></script>
+<script src="{{asset('js/search.js')}}"></script>
 </body>
 </html>
