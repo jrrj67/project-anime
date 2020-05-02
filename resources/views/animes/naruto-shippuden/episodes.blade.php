@@ -21,12 +21,6 @@
                     Episódios: 500
                     </p>
                     <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
                     <p>
                     <h6>Naruto: Shippūden (ナルト疾風伝, Naruto Shippūden; Literalmente significa "Crônicas do Furacão
                         Naruto") é o anime adaptado da parte secundária do mangá, definindo dois anos e meio após a
