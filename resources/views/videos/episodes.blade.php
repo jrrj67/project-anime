@@ -78,19 +78,19 @@
             {
                 setEpisode('ep'.$pgEpisode[22], $pgEpisode[22], 'Naruto Shippuden Episódio - '.$pgEpisode[22]);
                 setEpisode('ep'.$pgEpisode[23], $pgEpisode[23], 'Naruto Shippuden Episódio - '.$pgEpisode[23]);
-                setEpisode('ep'.$pgEpisode[25], $pgEpisode[25], 'Naruto Shippuden Episódio - '.$pgEpisode[25]);
+                setEpisode('ep'.$pgEpisode[24], $pgEpisode[24], 'Naruto Shippuden Episódio - '.$pgEpisode[24]);
             }
             ?>
         </div>
         <div class="row">
             <?php
-            if (isset($pgEpisode[27]))
+            if (isset($pgEpisode[25]))
             {
+                setEpisode('ep'.$pgEpisode[25], $pgEpisode[25], 'Naruto Shippuden Episódio - '.$pgEpisode[25]);
+                setEpisode('ep'.$pgEpisode[26], $pgEpisode[26], 'Naruto Shippuden Episódio - '.$pgEpisode[26]);
                 setEpisode('ep'.$pgEpisode[27], $pgEpisode[27], 'Naruto Shippuden Episódio - '.$pgEpisode[27]);
                 setEpisode('ep'.$pgEpisode[28], $pgEpisode[28], 'Naruto Shippuden Episódio - '.$pgEpisode[28]);
                 setEpisode('ep'.$pgEpisode[29], $pgEpisode[29], 'Naruto Shippuden Episódio - '.$pgEpisode[29]);
-                setEpisode('ep'.$pgEpisode[30], $pgEpisode[30], 'Naruto Shippuden Episódio - '.$pgEpisode[30]);
-                setEpisode('ep'.$pgEpisode[31], $pgEpisode[31], 'Naruto Shippuden Episódio - '.$pgEpisode[31]);
             }
             ?>
         </div>
