@@ -27,7 +27,7 @@
                             </li>
                             <li class="col l4 push-l1 right input-field hide-on-med-and-down">
                                 <input type="text" id="autocomplete-input" class="autocomplete grey darken-3 white-text"
-                                       autocomplete="off" style="text-indent:10px; border-radius: 10px">
+                                       autocomplete="off" style="text-indent:10px;">
                             </li>
                         </form>
                     </ul>

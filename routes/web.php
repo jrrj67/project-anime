@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('naruto-shippuden/episodes/{page}', 'VideoController@show')->name('episodes');
+Route::get('naruto-shippuden/episodes/{page}', 'NarutoShippudenController@show')->name('naruto-shippuden-episodes');
 
-Route::get('naruto-shippuden/watch/{id}', 'VideoController@watch')->name('watch');
+Route::get('naruto-shippuden/watch/{id}', 'NarutoShippudenController@watch')->name('naruto-shippuden-watch');
