@@ -18,7 +18,7 @@
                 $playBtnPath = asset('images/playBtn.png');
 
                 echo
-                "<div class='col l2 push-l1'>
+                "<div class='col l2 push-l1 z-depth-1 hoverable'>
                         <div class='card'>
                             <div class='card-image $epCover'>
                                 <a href='$episodePath'>

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/materialize.css')}}">
     <link rel="stylesheet" href="{{asset('css/icons.css')}}">
+    <link rel="stylesheet" href="{{asset('css/plyr.css')}}">
     <title>@yield('title')</title>
 </head>
 <body class="grey darken-4">
@@ -15,16 +16,16 @@
     <nav>
         <div class="nav-wrapper orange darken-3">
             <div class="row">
-                <a href="{{route('home')}}" class="brand-logo col l1 push-l1">ProjectAnimes</a>
+                <a href="{{route('home')}}" class="brand-logo col l1">ProjectAnimes</a>
                 <div class="col l11" style="padding-right: 0">
                     <ul>
                         <form action="">
-                            <li class="right red darken-4">
+                            <li class="col l1 push-l12 hide-on-med-and-down">
                                 <button class="waves-effect white-text transparent" style="border: none;">
                                     <i class="material-icons">search</i>
                                 </button>
                             </li>
-                            <li class="col l4 right input-field grey darken-4">
+                            <li class="col l4 push-l1 right input-field hide-on-med-and-down">
                                 <input type="text" id="autocomplete-input" class="autocomplete grey darken-3 white-text"
                                        autocomplete="off" style="text-indent:10px; border-radius: 10px">
                             </li>
@@ -43,7 +44,6 @@
 </main>
 
 <footer>
-    @yield('footer')
 
     <footer class="page-footer orange darken-3">
         <div class="container">
@@ -63,5 +63,6 @@
 </footer>
 <script src="{{asset('js/materialize.js')}}"></script>
 <script src="{{asset('js/search.js')}}"></script>
+@yield('footer')
 </body>
 </html>

@@ -14,7 +14,7 @@
             <div class="col l12">
                 <div class="row">
                     <div class="col l3">
-                        <a class="hoverable" href="{{route('episodes', 1)}}">
+                        <a class="hoverable z-depth-1" href="{{route('episodes', 1)}}">
                             <img class="responsive-img" src="{{asset('covers/naruto-cover.jpg')}}" alt="">
                         </a>
                             <h6 class="center white-text">Naruto Shippuden</h6>
