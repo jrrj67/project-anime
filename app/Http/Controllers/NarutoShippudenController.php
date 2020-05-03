@@ -9,7 +9,7 @@ class NarutoShippudenController extends Controller
     public function show(Request $request)
     {
         $currentPage = $request->route('page');
-        $maxPage = 16;
+        $maxPage = 17;
         $maxEpisode = 500;
 
         //validate route /0
@@ -24,7 +24,7 @@ class NarutoShippudenController extends Controller
         $nextPage = $currentPage + 1;
 
         //paginate
-        $perPage = 32;
+        $perPage = 30;
 
         if ($currentPage == 1)
         {
@@ -34,14 +34,13 @@ class NarutoShippudenController extends Controller
         if ($currentPage > 1)
         {
 
-            $i = $currentPage * $perPage - $perPage - 1;
+            $i = $currentPage * $perPage - $perPage + 1;
         }
 
         for ( ;$i <= $perPage * $currentPage and $i <= $maxEpisode; $i++)
         {
             $pgEpisode[] = $i;
         }
-
 
         return view('animes.naruto-shippuden.episodes', compact('pgEpisode', 'previousPage', 'nextPage'));
     }

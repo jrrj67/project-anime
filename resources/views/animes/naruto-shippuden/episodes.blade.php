@@ -91,9 +91,9 @@
         </div>
         <div class="row">
             <?php
-            setEpisode('ep' . $pgEpisode[20], $pgEpisode[20], 'Naruto Shippuden Episódio - ' . $pgEpisode[20]);
-            setEpisode('ep' . $pgEpisode[21], $pgEpisode[21], 'Naruto Shippuden Episódio - ' . $pgEpisode[21]);
-            if (isset($pgEpisode[22])) {
+            if (isset($pgEpisode[20])) {
+                setEpisode('ep' . $pgEpisode[20], $pgEpisode[20], 'Naruto Shippuden Episódio - ' . $pgEpisode[20]);
+                setEpisode('ep' . $pgEpisode[21], $pgEpisode[21], 'Naruto Shippuden Episódio - ' . $pgEpisode[21]);
                 setEpisode('ep' . $pgEpisode[22], $pgEpisode[22], 'Naruto Shippuden Episódio - ' . $pgEpisode[22]);
                 setEpisode('ep' . $pgEpisode[23], $pgEpisode[23], 'Naruto Shippuden Episódio - ' . $pgEpisode[23]);
                 setEpisode('ep' . $pgEpisode[24], $pgEpisode[24], 'Naruto Shippuden Episódio - ' . $pgEpisode[24]);
@@ -164,6 +164,9 @@
                     </li>
                     <li id="16" class="waves-effect darken-3"><a class="grey-text"
                                                                  href="{{route('naruto-shippuden-episodes', 16)}}">16</a>
+                    </li>
+                    <li id="17" class="waves-effect darken-3"><a class="grey-text"
+                                                                 href="{{route('naruto-shippuden-episodes', 17)}}">17</a>
                     </li>
                     <li id="nxt" class="waves-effect"><a class="grey-text"
                                                          href="{{route('naruto-shippuden-episodes', $nextPage)}}"><i
