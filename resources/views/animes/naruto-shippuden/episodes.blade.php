@@ -188,7 +188,7 @@
         if (currentPage === '1') {
             document.getElementById('prv').style.pointerEvents = "none";
         }
-        if (currentPage === '16') {
+        if (currentPage === '17') {
             document.getElementById('nxt').style.pointerEvents = "none";
         }
 
