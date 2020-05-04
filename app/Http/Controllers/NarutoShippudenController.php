@@ -57,6 +57,16 @@ class NarutoShippudenController extends Controller
             $episodeId = '0'.$episodeId;
         }
 
-        return view('animes.naruto-shippuden.watch', compact('episodeId', 'previousEpisode', 'nextEpisode'));
+        //next episodes
+        $nextEpisodeId = $episodeId + 1;
+        $nextEpisodes = $episodeId + 5;
+
+        for (; $nextEpisodeId <= $nextEpisodes; $nextEpisodeId++)
+        {
+            $nextEpisodesList[] = $nextEpisodeId;
+        }
+
+        return view('animes.naruto-shippuden.watch', compact('episodeId',
+            'previousEpisode', 'nextEpisode', 'nextEpisodesList'));
     }
 }
