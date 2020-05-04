@@ -53,7 +53,7 @@
             </a>
             <ul class="collapsible"  style="border: 0">
                 <li class="active">
-                    <div id="btnColDown" class="collapsible-header col s2 push-s5" style="padding: 0">
+                    <div id="btnColDown" class="collapsible-header col s1 push-s5" style="padding: 0">
                         <a class="waves-effect waves-light btn-small transparent" style="padding: 0">
                             <i id="arrow_down" class="material-icons" style="margin: 0">keyboard_arrow_up</i>
                         </a>
