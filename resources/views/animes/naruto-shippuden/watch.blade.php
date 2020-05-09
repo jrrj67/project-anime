@@ -25,7 +25,7 @@
                 <video id="plyr-video" class="responsive-video"
                        poster="https://animesorion.vip/wsx/ep/naruto-shippuuden-episodio-{{intval($episodeId)}}-animes-orion.jpg"
                        controls>
-                    <source src="https://ns567958.ip-51-79-99.net/Uploads/Animes/N/naruto-shippuden/{{$episodeId}}.mp4"
+                    <source src="https://ns545442.ip-66-70-176.net/Uploads/Animes/N/naruto-shippuden/{{$episodeId}}.mp4"
                             type="video/mp4">
                 </video>
             </div>
