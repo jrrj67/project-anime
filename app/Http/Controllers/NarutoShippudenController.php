@@ -50,7 +50,7 @@ class NarutoShippudenController extends Controller
     public function watch(Request $request)
     {
         $url = '';
-//        $url = $this->getUrl();
+        $url = $this->getUrl();
         $episodeId = $request->route('id');
         $previousEpisode = $episodeId - 1;
         $nextEpisode = $episodeId + 1;
