@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class NarutoShippudenController extends Controller
 {
@@ -47,6 +48,8 @@ class NarutoShippudenController extends Controller
 
     public function watch(Request $request)
     {
+        $this->getUrl();
+
         $episodeId = $request->route('id');
         $previousEpisode = $episodeId - 1;
         $nextEpisode = $episodeId + 1;
@@ -68,5 +71,11 @@ class NarutoShippudenController extends Controller
 
         return view('animes.naruto-shippuden.watch', compact('episodeId',
             'previousEpisode', 'nextEpisode', 'nextEpisodesList'));
+    }
+
+    public function getUrl()
+    {
+        $response = Http::get('https://www.google.com/');
+        dd($response->successful());
     }
 }
