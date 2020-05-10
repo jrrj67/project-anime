@@ -75,7 +75,7 @@ class NarutoShippudenController extends Controller
 
     public function getUrl()
     {
-        $response = Http::get('https://www.google.com/');
+        $response = Http::get('https://animesorion.vip/episodio/naruto-shippuuden-ep-2/40/');
         dd($response->headers());
     }
 }
