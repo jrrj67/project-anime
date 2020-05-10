@@ -9,29 +9,12 @@
 
 @section('main')
     <div class="row">
-        <div class="col l6 push-l1 hide-on-med-and-down">
+        <div class="col l7 push-l1 hide-on-med-and-down">
             <div style="font-size: 20px" class="grey-text">Naruto Shippuden Episódio {{intval($episodeId)}}</div>
         </div>
         <div class="col s12 center hide-on-med-and-up">
             <div style="font-size: 20px" class="grey-text">Naruto Shippuden Episódio {{intval($episodeId)}}</div>
         </div>
-        <div class="col l1 push-l2 s2 push-s2 ">
-            <a id="prv-mob" href="{{route('naruto-shippuden-watch', $previousEpisode)}}"
-               class="waves-effect waves-light btn
-                    orange darken-3">
-                <i class="material-icons">navigate_before</i>
-            </a>
-        </div>
-        <a id="menu" href="{{route('naruto-shippuden-episodes', 1)}}"
-           class="col l1 push-l5 s2 push-s3 waves-effect waves-light btn-small
-                    orange darken-3" style="padding: 0">
-            <i class="material-icons">menu</i>
-        </a>
-        <a id="nxt-mob" href="{{route('naruto-shippuden-watch', $nextEpisode)}}"
-           class="col l1 push-l5 s2 push-s4 waves-effect waves-light btn-small
-                    orange darken-3" style="padding: 0">
-            <i class="material-icons">navigate_next</i>
-        </a>
     </div>
     <div class="">
         <div class="row">
@@ -43,35 +26,39 @@
                             type="video/mp4">
                 </video>
             </div>
-            <div class="row hide-on-med-and-up">
-                <div class="row"></div>
-                <a id="prv-mob" href="{{route('naruto-shippuden-watch', $previousEpisode)}}"
-                   class="col s2 push-s2 waves-effect waves-light btn-small
-                    orange darken-3" style="padding: 0">
-                    <i class="material-icons">navigate_before</i>
-                </a>
-                <a id="menu" href="{{route('naruto-shippuden-episodes', 1)}}"
-                   class="col s2 push-s3 waves-effect waves-light btn-small
-                    orange darken-3" style="padding: 0">
-                    <i class="material-icons">menu</i>
-                </a>
-                <a id="nxt-mob" href="{{route('naruto-shippuden-watch', $nextEpisode)}}"
-                   class="col s2 push-s4 waves-effect waves-light btn-small
-                    orange darken-3" style="padding: 0">
-                    <i class="material-icons">navigate_next</i>
-                </a>
-            </div>
             <div class="col l3 push-l1 s12">
                 <ul class="collapsible"  style="border: 0">
+                    <div class="row"></div>
+                    <li class="col l1 push-l2 s2 push-s2" style="padding: 0">
+                        <a id="prv-mob" href="{{route('naruto-shippuden-watch', $previousEpisode)}}"
+                           class="waves-effect waves-light btn
+                            orange darken-3">
+                            <i class="material-icons">navigate_before</i>
+                        </a>
+                    </li>
+                    <li class="col l1 push-l4 s2 push-s3" style="padding: 0">
+                        <a id="menu" href="{{route('naruto-shippuden-episodes', 1)}}"
+                           class="waves-effect waves-light btn
+                            orange darken-3">
+                            <i class="material-icons">menu</i>
+                        </a>
+                    </li>
+                    <li class="col l1 push-l6 s2 push-s4" style="padding: 0">
+                        <a id="nxt-mob" href="{{route('naruto-shippuden-watch', $nextEpisode)}}"
+                           class="waves-effect waves-light btn
+                            orange darken-3">
+                            <i class="material-icons">navigate_next</i>
+                        </a>
+                    </li>
                     <li class="active">
-                        <div id="btnColDown" class="collapsible-header col l2 push-l10 s1 push-s11" style="padding: 0">
-                            <a class="waves-effect waves-light btn-small transparent" style="padding: 0">
-                                <i id="arrow_down" class="material-icons" style="margin: 0">keyboard_arrow_up</i>
-                            </a>
-                        </div>
+{{--                        <div id="btnColDown" class="collapsible-header col l2 push-l8 s1 push-s5">--}}
+{{--                            <a class="waves-effect waves-light btn transparent" style="padding: 0">--}}
+{{--                                <i id="arrow_down" class="material-icons white-text center" style="margin: 0">keyboard_arrow_up</i>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
                         <br>
-                        <h6 class="grey-text">Próximos episódios:</h6>
                         <br>
+                        <h6 class="center grey-text" style="padding-bottom: 10px">Próximos episódios:</h6>
                         <div id="dwnBtn" class="collapsible-body">
                             <?php
                             function setEpisode($epCover, $episodeNumber, $label)
@@ -152,6 +139,7 @@
         //disable prv/next button
         if (currentEpisode === '1') {
             document.getElementById('prv-mob').style.pointerEvents = "none";
+            document.getElementById('prv-mob').classList.add('grey');
         }
 
 
@@ -166,11 +154,12 @@
             document.getElementById('thirdEpisode').remove();
         }
 
-        if (currentEpisode === '500') {
-            document.getElementById('nxt-mob').style.pointerEvents = "none";
-            document.getElementById('dwnBtn').remove();
-            document.getElementById('btnColDown').style.pointerEvents = "none";
-            document.getElementById('arrow_down').innerText = 'keyboard_arrow_down';
+            if (currentEpisode === '500') {
+                document.getElementById('nxt-mob').style.pointerEvents = "none";
+                document.getElementById('nxt-mob').classList.add('grey');
+                document.getElementById('dwnBtn').remove();
+            // document.getElementById('btnColDown').style.pointerEvents = "none";
+            // document.getElementById('arrow_down').innerText = 'keyboard_arrow_down';
         }
     });
     </script>
