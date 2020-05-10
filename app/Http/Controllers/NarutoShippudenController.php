@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Psy\Util\Str;
 
 class NarutoShippudenController extends Controller
 {
@@ -76,6 +77,8 @@ class NarutoShippudenController extends Controller
     public function getUrl()
     {
         $response = Http::get('https://animesorion.vip/episodio/naruto-shippuuden-ep-2/40/');
-        dd($response->headers());
+        $body = $response->body();
+        $url = Str::between($body, 'https://', '.net');
+        dd($url);
     }
 }
