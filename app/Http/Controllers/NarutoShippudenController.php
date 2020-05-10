@@ -76,6 +76,6 @@ class NarutoShippudenController extends Controller
     public function getUrl()
     {
         $response = Http::get('https://www.google.com/');
-        dd($response->json());
+        dd($response->headers());
     }
 }
