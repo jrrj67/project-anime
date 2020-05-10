@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use Psy\Util\Str;
+use Illuminate\Support\Str;
 
 class NarutoShippudenController extends Controller
 {
