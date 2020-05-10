@@ -16,4 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     var elems = document.querySelectorAll('.autocomplete');
     var instances = M.Autocomplete.init(elems, options);
+
+    //dropdown mobile
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var options =
+        {
+            constrainWidth: false,
+            closeOnClick: false
+        };
+    var instances = M.Dropdown.init(elems, options);
+
 });

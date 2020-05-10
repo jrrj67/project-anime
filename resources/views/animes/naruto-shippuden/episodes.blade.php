@@ -8,7 +8,7 @@
 @endsection
 
 @section('main')
-    <div class="row">
+    <div class="row" style="z-index: -1">
         <div class="col l10 push-l1">
             <div class="row">
                 <div class="col l3">

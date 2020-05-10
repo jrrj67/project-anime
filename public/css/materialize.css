@@ -5546,8 +5546,8 @@ button.btn-floating {
   background-color: #212121;
   margin: 0;
   display: none;
-  min-width: 100px;
-  overflow-y: auto;
+  /*min-width: 100px;*/
+  /*overflow-y: auto;*/
   opacity: 0;
   position: absolute;
   left: 0;
