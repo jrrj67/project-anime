@@ -48,8 +48,7 @@ class NarutoShippudenController extends Controller
 
     public function watch(Request $request)
     {
-        $this->getUrl();
-
+        $url = $this->getUrl();
         $episodeId = $request->route('id');
         $previousEpisode = $episodeId - 1;
         $nextEpisode = $episodeId + 1;
@@ -70,12 +69,12 @@ class NarutoShippudenController extends Controller
         }
 
         return view('animes.naruto-shippuden.watch', compact('episodeId',
-            'previousEpisode', 'nextEpisode', 'nextEpisodesList'));
+            'previousEpisode', 'nextEpisode', 'nextEpisodesList', 'url'));
     }
 
     public function getUrl()
     {
-        $response = Http::get('https://www.google.com/');
-        dd($response->successful());
+        $body = Http::get('https://www.google.com/')->body();
+        dd($body);
     }
 }
