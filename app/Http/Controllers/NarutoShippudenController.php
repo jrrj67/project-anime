@@ -51,6 +51,7 @@ class NarutoShippudenController extends Controller
     {
 //        $url = '';
         $url = $this->getUrl();
+        dd($url);
         $episodeId = $request->route('id');
         $previousEpisode = $episodeId - 1;
         $nextEpisode = $episodeId + 1;
