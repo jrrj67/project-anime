@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class NarutoShippudenController extends Controller
 {
@@ -48,8 +49,8 @@ class NarutoShippudenController extends Controller
 
     public function watch(Request $request)
     {
-        $this->getUrl();
-
+//        $url = '';
+        $url = $this->getUrl();
         $episodeId = $request->route('id');
         $previousEpisode = $episodeId - 1;
         $nextEpisode = $episodeId + 1;
@@ -70,12 +71,16 @@ class NarutoShippudenController extends Controller
         }
 
         return view('animes.naruto-shippuden.watch', compact('episodeId',
-            'previousEpisode', 'nextEpisode', 'nextEpisodesList'));
+            'previousEpisode', 'nextEpisode', 'nextEpisodesList', 'url'));
     }
 
     public function getUrl()
     {
-        $response = Http::get('https://www.google.com/');
-        dd($response->successful());
+        $body = Http::get('https://animesorion.vip/episodio/12')->body();
+        dd($body);
+        $url = Str::between($body, 'ns', '.net');
+        $url = Str::before($url, '.net');
+
+        return $url;
     }
 }
