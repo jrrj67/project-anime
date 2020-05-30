@@ -51,7 +51,6 @@ class NarutoShippudenController extends Controller
     {
 //        $url = '';
         $url = $this->getUrl();
-        dd($url);
         $episodeId = $request->route('id');
         $previousEpisode = $episodeId - 1;
         $nextEpisode = $episodeId + 1;
@@ -77,8 +76,8 @@ class NarutoShippudenController extends Controller
 
     public function getUrl()
     {
+        dd('oii');
         $body = Http::get('https://animesorion.vip/episodio/12')->body();
-        dd($body);
         $url = Str::between($body, 'ns', '.net');
         $url = Str::before($url, '.net');
 
