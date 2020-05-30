@@ -79,6 +79,7 @@ class NarutoShippudenController extends Controller
     {
         $response = Http::get('https://animesorion.vip/episodio/12');
         $body = $response->body();
+        dd($body);
         $url = Str::between($body, 'ns', '.net');
         $url = Str::before($url, '.net');
 
