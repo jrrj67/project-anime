@@ -62,7 +62,7 @@ class NarutoShippudenController extends Controller
             )
         );
 
-        dd(file_get_contents("www.animesorion.vip/episodio/12", false, $context));
+        dd(file_get_contents("https://www.animesorion.vip/episodio/12", false, $context));
 
         //remove 0 from route episodes
         if (intval($episodeId) < 9)
