@@ -54,8 +54,13 @@ class NarutoShippudenController extends Controller
         $episodeId = $request->route('id');
         $previousEpisode = $episodeId - 1;
         $nextEpisode = $episodeId + 1;
-        ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0)');
-        dd(file_get_contents("https://www.animesorion.vip/episodio/12"));
+        $context  = stream_context_create(
+            array(
+                "http" => array(
+                    "header" => "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
+                )
+            ));
+        dd(file_get_contents("https://www.animesorion.vip/episodio/12", false, $context));
 
         //remove 0 from route episodes
         if (intval($episodeId) < 9)
