@@ -1,0 +1,7 @@
+php:
+  build: .
+  container_name: "web"
+  ports:
+    - "8080:8080"
+  volumes:
+    - ../:/var/www/html
