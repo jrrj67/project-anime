@@ -49,15 +49,7 @@ class NarutoShippudenController extends Controller
     public function watch(Request $request)
     {
         $episodeId = $request->route('id');
-
-        if($episodeId <= 100)
-        {
-            $episode = '0' . $episodeId;
-        } else {
-            $episode = $episodeId;
-        }
-
-        $url = "https://videos.animesgratisbr.com/pubfolder/animes/NarutoShippuden/$episode.mp4";
+        $url = $this->getUrl($episodeId);
         $previousEpisode = $episodeId - 1;
         $nextEpisode = $episodeId + 1;
 
@@ -72,5 +64,15 @@ class NarutoShippudenController extends Controller
 
         return view('animes.naruto-shippuden.watch', compact('episodeId',
             'previousEpisode', 'nextEpisode', 'nextEpisodesList', 'url'));
+    }
+
+    public function getUrl($episodeId)
+    {
+        $body = Http::get("https://www.dattebane.com/NarutoShippuuden/$episodeId")->body();
+        $url = Str::between($body, 'file: \'https://', '.mp4');
+        $url = Str::before($url, '.mp4');
+        $finalUrl = "https://" . $url . '.mp4';
+
+        return $finalUrl;
     }
 }
