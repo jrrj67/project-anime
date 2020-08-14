@@ -49,9 +49,16 @@ class NarutoShippudenController extends Controller
     public function watch(Request $request)
     {
         $episodeId = $request->route('id');
-        $url = $this->getUrl($episodeId);
+        $url = $this->getUrl();
         $previousEpisode = $episodeId - 1;
         $nextEpisode = $episodeId + 1;
+
+        //remove 0 from route episodes
+        if ($episodeId <= 9)
+        {
+            $episodeId = '0' . $episodeId;
+        }
+        $url = 'https://ns' . $url . "naruto-shippuden/$episodeId" . '.mp4';
 
         //next episodes
         $nextEpisodeId = $episodeId + 1;
@@ -66,13 +73,11 @@ class NarutoShippudenController extends Controller
             'previousEpisode', 'nextEpisode', 'nextEpisodesList', 'url'));
     }
 
-    public function getUrl($episodeId)
+    public function getUrl()
     {
-        $body = Http::get("https://www.dattebane.com/NarutoShippuuden/$episodeId")->body();
-        $url = Str::between($body, 'file: \'https://', '.mp4');
+        $body = Http::get('https://giganima.net/video/4099/anime')->body();
+        $url = Str::between($body, 'source src="https://ns', 'naruto-shippuden/');
         $url = Str::before($url, '.mp4');
-        $finalUrl = "https://" . $url . '.mp4';
-
-        return $finalUrl;
+        return $url;
     }
 }
