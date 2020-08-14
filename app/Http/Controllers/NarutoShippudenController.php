@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\NarutoShippuden;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
@@ -11,11 +12,9 @@ class NarutoShippudenController extends Controller
     public function show(Request $request)
     {
         $currentPage = $request->route('page');
-        $maxPage = 17;
-        $maxEpisode = 500;
 
         //validate route /0
-        if($currentPage == 0 or $currentPage > $maxPage)
+        if($currentPage == 0 or $currentPage > NarutoShippuden::MAX_PAGE)
         {
             return abort('404');
         }
@@ -39,7 +38,7 @@ class NarutoShippudenController extends Controller
             $i = $currentPage * $perPage - $perPage + 1;
         }
 
-        for ( ;$i <= $perPage * $currentPage and $i <= $maxEpisode; $i++)
+        for ( ;$i <= $perPage * $currentPage and $i <= NarutoShippuden::MAX_EPISODE; $i++)
         {
             $pgEpisode[] = $i;
         }
@@ -49,17 +48,18 @@ class NarutoShippudenController extends Controller
 
     public function watch(Request $request)
     {
-//        $url = '';
-        $url = $this->getUrl();
         $episodeId = $request->route('id');
+
+        if($episodeId <= 100)
+        {
+            $episode = '0' . $episodeId;
+        } else {
+            $episode = $episodeId;
+        }
+
+        $url = "https://videos.animesgratisbr.com/pubfolder/animes/NarutoShippuden/$episode.mp4";
         $previousEpisode = $episodeId - 1;
         $nextEpisode = $episodeId + 1;
-
-        //remove 0 from route episodes
-        if (intval($episodeId) < 9)
-        {
-            $episodeId = '0'.$episodeId;
-        }
 
         //next episodes
         $nextEpisodeId = $episodeId + 1;
@@ -72,15 +72,5 @@ class NarutoShippudenController extends Controller
 
         return view('animes.naruto-shippuden.watch', compact('episodeId',
             'previousEpisode', 'nextEpisode', 'nextEpisodesList', 'url'));
-    }
-
-    public function getUrl()
-    {
-        $body = Http::get('https://animesorion.vip/episodio/12')->body();
-        dd($body);
-        $url = Str::between($body, 'ns', '.net');
-        $url = Str::before($url, '.net');
-
-        return $url;
     }
 }
